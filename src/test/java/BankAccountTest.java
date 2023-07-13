@@ -124,7 +124,17 @@ public class BankAccountTest {
         bankaccount.removeBalance(100);
         int actual = bankaccount.getBalance();
         //Then
-        int expected = -100;
+        int expected = 0;
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    public void withdrawalMessage() {
+        //Given
+        //When
+        String actual = bankaccount.removeBalance(100);
+        //Then
+        String expected = "You have reached your overdraft limit: incomplete withdrawal";;
         assertThat(actual).isEqualTo(expected);
     }
 

@@ -66,8 +66,8 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public int addBalance(int extraBalance) { //ASK WHY WHEN I DO PUBLIC VOID IT SAYS VOID AND INT ARE INCOMPATIBLE
-       return this.balance += extraBalance;
+    public void addBalance(int extraBalance) { //ASK WHY WHEN I DO PUBLIC VOID IT SAYS VOID AND INT ARE INCOMPATIBLE
+        this.balance += extraBalance;
     }
 
     public String removeBalance(int balanceToBeTaken) {
